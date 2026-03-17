@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伍润婷 - 个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1976d2;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .core-tag {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .campus-info {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #1976d2;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e3f2fd;
+            padding-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .skill-category {
+            background: rgba(25, 118, 210, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .skill-category h3 {
+            font-size: 16px;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+        }
+        
+        .skill-level {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .core-courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .course-tag {
+            background: rgba(25, 118, 210, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #1976d2;
+        }
+        
+        .experience-item {
+            background: rgba(25, 118, 210, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .experience-title {
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 5px;
+        }
+        
+        .experience-period {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .experience-description {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .achievement-item {
+            background: rgba(25, 118, 210, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .hobby-tag {
+            background: rgba(25, 118, 210, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #1976d2;
+        }
+        
+        .personal-motto {
+            background: rgba(25, 118, 210, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            font-style: italic;
+            text-align: center;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=college%20student%20avatar%20clear%20youthful%20证件照%20professional&image_size=square" alt="伍润婷" class="avatar">
+            <h1>伍润婷</h1>
+            <div class="core-tag">电子科技大学成都学院 软件工程专业 大二</div>
+            <div class="campus-info">
+                电子科技大学成都学院 | 计算机科学与技术学院 | 软件工程专业<br>
+                2024级 | 预计2028年毕业 | 本科
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>1283522286@qq.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>💬</span>
+                    <span>微信：wrt202714（备注「仅交流学习」）</span>
+                </div>
+                <div class="contact-item">
+                    <span>🐧</span>
+                    <span>QQ：1283522286</span>
+                </div>
+            </div>
+        </header>
+        
+        <section class="section">
+            <h2>核心学习能力</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>技术类</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">熟练</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-level">掌握</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML/CSS</span>
+                        <span class="skill-level">基础</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Matlab</span>
+                        <span class="skill-level">了解</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>非技术类</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">文案写作</span>
+                        <span class="skill-level">掌握</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">PPT制作</span>
+                        <span class="skill-level">掌握</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">英语口语</span>
+                        <span class="skill-level">基础</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">数据分析</span>
+                        <span class="skill-level">了解</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>核心课程</h3>
+            <div class="core-courses">
+                <span class="course-tag">数据结构</span>
+                <span class="course-tag">操作系统</span>
+                <span class="course-tag">计算机网络</span>
+                <span class="course-tag">数据库原理</span>
+                <span class="course-tag">面向对象编程</span>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>校园实践/经历</h2>
+            <div class="experience-item">
+                <div class="experience-title">班级学习委员</div>
+                <div class="experience-period">2025 - 至今</div>
+                <div class="experience-description">负责班级学习事务，组织学习小组，协助老师完成教学任务，提高班级整体成绩。</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title">辅导员助理</div>
+                <div class="experience-period">2025 - 至今</div>
+                <div class="experience-description">协助辅导员处理日常事务，组织班级活动，沟通学生与老师之间的信息。</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-title">课程设计：查成绩的网页</div>
+                <div class="experience-period">2025年秋季学期</div>
+                <div class="experience-description">使用VSCode工具，完成需求分析和页面设计，实现学生成绩查询功能。</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>竞赛/获奖成果</h2>
+            <div class="achievements">
+                <div class="achievement-item">
+                    <div class="experience-title">校级三等奖学金</div>
+                    <div class="experience-period">2024-2025学年</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="experience-title">CET-4</div>
+                    <div class="experience-period">2025年6月</div>
+                    <div class="experience-description">分数：500+</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>学习计划</h2>
+            <div class="experience-item">
+                <div class="experience-description">
+                    <p>正在学习：JavaWeb框架</p>
+                    <p>计划：2027年考取软件设计师证书</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>个性化补充</h2>
+            <h3>兴趣爱好</h3>
+            <div class="hobbies">
+                <span class="hobby-tag">编程</span>
+                <span class="hobby-tag">阅读</span>
+                <span class="hobby-tag">校园跑</span>
+                <span class="hobby-tag">音乐</span>
+                <span class="hobby-tag">旅行</span>
+            </div>
+            
+            <h3>个人理念</h3>
+            <div class="personal-motto">
+                "在学习中试错，在实践中成长"
+                <br>
+                "专注专业学习，也热爱校园生活"
+            </div>
+        </section>
+    </div>
+</body>
+</html>
